@@ -69,7 +69,7 @@ namespace Gestao_Patrimonio.Applications.Services
         {
             Validar.ValidarNome(dto.NomeArea);
 
-            Area areaBanco = _repository.BuscarPorNome(dto.NomeArea);
+            Area areaBanco = _repository.BuscarPorId(areaId);
 
             if(areaBanco == null)
             {

@@ -2,6 +2,7 @@ using DotNetEnv;
 using Gestao_Patrimonio.Applications.Services;
 using Gestao_Patrimonio.Contexts;
 using Gestao_Patrimonio.Interfaces;
+using Gestao_Patrimonio.Repositories;
 using GestaoPatrimonio.Repositores;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,6 +27,10 @@ builder.Services.AddSwaggerGen();
 //Areas
 builder.Services.AddScoped<IAreaRepository, AreaRepository>();
 builder.Services.AddScoped<AreaService>();
+
+//Localizacoes
+builder.Services.AddScoped<ILocalizacaoRepository, LocalizacaoRepository>();
+builder.Services.AddScoped<LocalizacaoService>();
 
 var app = builder.Build();
 
