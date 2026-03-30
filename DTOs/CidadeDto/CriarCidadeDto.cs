@@ -2,6 +2,7 @@
 {
     public class CriarCidadeDto
     {
-        public string NomeCidadeEEstado { get; set; } = string.Empty;
+        public string NomeCidade { get; set; } = string.Empty;
+        public string Estado { get; set; } = string.Empty;
     }
 }

@@ -6,9 +6,17 @@ namespace Gestao_Patrimonio.Applications.Regras
     {
         public static void ValidarNome(string nome)
         {
-            if(string.IsNullOrWhiteSpace(nome))
+            if (string.IsNullOrWhiteSpace(nome))
             {
                 throw new DomainException("Nome é obrigatório");
+            }
+        }
+
+        public static void ValidarEstado(string estado)
+        {
+            if (string.IsNullOrWhiteSpace(estado))
+            {
+                throw new DomainException("Estado é obrigatório.");
             }
         }
     }
