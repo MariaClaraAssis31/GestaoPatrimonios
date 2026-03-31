@@ -40,7 +40,9 @@ builder.Services.AddScoped<CidadeService>();
 builder.Services.AddScoped<IBairroRepository, BairroRepository>();
 builder.Services.AddScoped<BairroService>();
 
-//Endereco
+//Usuario
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<UsuarioService>();
 
 var app = builder.Build();
 
