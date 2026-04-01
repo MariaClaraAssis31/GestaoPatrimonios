@@ -30,22 +30,22 @@ namespace Gestao_Patrimonio.Repositories
 
         public void Atualizar(Endereco endereco)
         {
-            if(endereco == null)
+            if (endereco == null)
             {
                 return;
             }
             Endereco enderecoBanco = _context.Endereco.Find(endereco.EnderecoID);
 
-            if(enderecoBanco == null)
+            if (enderecoBanco == null)
             {
                 return;
             }
-           
+
             enderecoBanco.Logradouro = endereco.Logradouro;
             _context.SaveChanges();
         }
 
-        public Endereco BuscarPorLogradouroENumero (string logradouro, int? numero, Guid enderecoId)
+        public Endereco BuscarPorLogradouroENumero(string logradouro, int? numero, Guid enderecoId)
         {
             return _context.Endereco.FirstOrDefault(endereco =>
             endereco.Logradouro.ToLower() == logradouro.ToLower() &&
@@ -57,4 +57,5 @@ namespace Gestao_Patrimonio.Repositories
         {
             return _context.Bairro.Any(bairro => bairro.BairroID == bairroId);
         }
-}    }
+    }
+}

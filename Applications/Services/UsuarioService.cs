@@ -16,7 +16,7 @@ namespace Gestao_Patrimonio.Applications.Services
         {
             List<Usuario> usuarios = _repository.Listar();
 
-            List<ListarUsuarioDto> usuariosDto = usuarios.Select(usuario => new ListarUsuarioDto(
+            List<ListarUsuarioDto> usuariosDto = usuarios.Select(usuario => new ListarUsuarioDto()
             {
                 UsuarioID = usuario.UsuarioID,
                 NIF = usuario.NIF,
